@@ -154,9 +154,8 @@ function showCountdown() {
   const container = document.getElementById('countdown');
 
   container.innerHTML =
-  `Cantares 1:15 "He aquí tú eres hermosa amada mía; he aquí que eres bella. Tus ojos son como de paloma".`;
-
-  container.classList.add('visible');
+ 
+  container.classList.add('');
 }
   }
   update();
@@ -240,4 +239,25 @@ function playBackgroundMusic() {
 // Intentar reproducir la música lo antes posible (al cargar la página)
 window.addEventListener('DOMContentLoaded', () => {
   playBackgroundMusic();
+});
+window.addEventListener("load", function () {
+
+  const versiculo = document.createElement("div");
+
+  versiculo.innerHTML =
+  'Cantares 1:15 "He aquí tú eres hermosa amada mía; he aquí que eres bella. Tus ojos son como de paloma".';
+
+  versiculo.style.position = "fixed";
+  versiculo.style.bottom = "20px";
+  versiculo.style.left = "50%";
+  versiculo.style.transform = "translateX(-50%)";
+  versiculo.style.textAlign = "center";
+  versiculo.style.fontSize = "16px";
+  versiculo.style.color = "#444";
+  versiculo.style.background = "rgba(255,255,255,0.8)";
+  versiculo.style.padding = "10px 20px";
+  versiculo.style.borderRadius = "10px";
+
+  document.body.appendChild(versiculo);
+
 });
